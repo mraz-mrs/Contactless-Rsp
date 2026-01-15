@@ -1,0 +1,28 @@
+BASE: ['']
+
+TRAIN:
+  EPOCHS: 500
+  BATCH_SIZE: 32
+  LR: 0.009
+  WEIGHT_DECAY: 0.0
+  SCHEDULER: 'cosine'
+  PRETRAIN: False # MAE pretrain
+  CONTINUE_TRAINING: False
+  ENCODER_FREEZE: True
+
+# Dataset
+DATA:
+  DATASET: 'Xinchuan'
+  ROOT: 'F:\Dataset\rppg\XinChuan\stmap\meta_data\RPPG' 
+  SPLIT: 0.8
+FS: 25
+
+# Model
+MODEL:
+  NAME: 'ft_vit_base_patch16'
+  PRETRAINED: 'G:\stmap_rsp_checkpoints\mae90_vit_base_patch16_dec512d8b_202512111730\best_checkpoints\mae_vit_base_patch16_dec512d8b_best.pth'
+  SAVEPATH: 'G:\stmap_rsp_checkpoints'
+  SAVE_INTERVAL: 50
+  MODEL_PATH: ''
+
+

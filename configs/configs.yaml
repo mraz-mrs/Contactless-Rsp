@@ -1,0 +1,23 @@
+BASE: ['']
+
+TRAIN:
+  EPOCHS: 2000
+  BATCH_SIZE: 32
+  LR: 0.001
+  WEIGHT_DECAY: 0.0
+  SCHEDULER: 'cosine'
+  PRETRAIN: True # MAE pretrain
+
+# Dataset
+DATA:
+  DATASET: 'Xinchuan'
+  ROOT: 'F:\Dataset\rppg\XinChuan\stmap\meta_data\RPPG' 
+  SPLIT: 0.8
+FS: 25
+
+# Model
+MODEL:
+  NAME: 'mae_vit_base_patch16_dec512d8b'
+  PRETRAINED: ''
+  SAVEPATH: 'G:\stmap_rsp_checkpoints'
+  SAVE_INTERVAL: 10

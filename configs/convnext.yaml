@@ -1,0 +1,27 @@
+BASE: ['']
+
+TRAIN:
+  EPOCHS: 500
+  BATCH_SIZE: 32
+  LR: 0.009
+  WEIGHT_DECAY: 0.0
+  SCHEDULER: 'cosine'
+  CONTINUE_TRAINING: False
+TEST:
+  BATCH_SIZE: 32
+  MODEL_PATH: 'G:\stmap_rsp_checkpoints\convnextv2_femto_202510291628\best_checkpoints\convnextv2_femto_best.pth'
+  FLAG: False
+# Dataset
+DATA:
+  DATASET: 'Xinchuan'
+  ROOT: 'F:\Dataset\rppg\XinChuan\stmap\meta_data\RPPG' 
+  SPLIT: 0.8
+FS: 25
+
+# Model
+MODEL:
+  NAME: 'convnextv2_femto'
+  PRETRAINED: 'G:\stmap_rsp_checkpoints\mae_vit_base_patch16_dec512d8b_202509241624\checkpoints\mae_vit_base_patch16_dec512d8b_1753.pth'
+  SAVEPATH: 'G:\stmap_rsp_checkpoints'
+  SAVE_INTERVAL: 50
+  MODEL_PATH: ''
